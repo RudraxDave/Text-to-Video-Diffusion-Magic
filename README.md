@@ -23,6 +23,7 @@ Before proceeding, verify that your environment has access to a GPU by running t
 ```python
 #@title Check your GPU!
 !nvidia-smi -L
+```
 
 ### Step 2: Install Dependencies
 
@@ -31,6 +32,7 @@ Install the necessary dependencies, including PyTorch, Diffusers, Transformers, 
 ```python
 #@title Install dependencies
 !pip -q install torch==2.0.0 git+https://github.com/huggingface/diffusers transformers accelerate imageio[ffmpeg]
+```
 
 ### Step 3: Setup Pipeline
 
@@ -57,15 +59,20 @@ pipe.components['text_encoder']
 
 pipe.components['unet']
 
+```
+
 #@title Generate your video
+```
 prompt = 'A Teddy bear running in New York City' #@param {type:"string"}
 negative_prompt = 'low quality' #@param {type:"string"}
 video_duration_seconds = 3 #@param {type:"integer"}
 num_frames = video_duration_seconds * 10
 video_frames = pipe(prompt, negative_prompt="low quality", num_inference_steps=25, num_frames=num_frames).frames
 video_path = export_to_video(video_frames)
+```
 
 #@title Display the video
+```
 import imageio
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -88,6 +95,7 @@ def display_video(video):
     return anime
 video = imageio.mimread(video_path)  #Loading video
 HTML(display_video(video).to_html5_video())  #Inline video display in HTML5
+```
 
 ## Result Videos
 
