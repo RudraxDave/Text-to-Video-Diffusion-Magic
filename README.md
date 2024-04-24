@@ -39,7 +39,6 @@ Install the necessary dependencies, including PyTorch, Diffusers, Transformers, 
 Initialize the DiffusionPipeline with the desired configuration settings, including model variant and precision.
 
 ```python
-#@title Setup pipeline
 import torch
 from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
 from diffusers.utils import export_to_video
@@ -61,7 +60,7 @@ pipe.components['unet']
 
 ```
 
-#@title Generate your video
+### Step 4: Generate your video
 ```
 prompt = 'A Teddy bear running in New York City' #@param {type:"string"}
 negative_prompt = 'low quality' #@param {type:"string"}
@@ -71,7 +70,7 @@ video_frames = pipe(prompt, negative_prompt="low quality", num_inference_steps=2
 video_path = export_to_video(video_frames)
 ```
 
-#@title Display the video
+### Step 5: Display the video
 ```
 import imageio
 import matplotlib.pyplot as plt
