@@ -100,9 +100,27 @@ HTML(display_video(video).to_html5_video())  #Inline video display in HTML5
 
 You can view the generated videos below:
 
-- [Video 1](result_videos/video1.mp4)
-- [Video 2](result_videos/video2.mp4)
-- [Video 3](result_videos/video3.mp4)
+## Result Videos
+
+You can view the generated videos below:
+
+### Video 1
+
+![Video 1](https://github.com/RudraxDave/Text-to-Video-Diffusion-Magic/blob/88b8e1fad082bd902412256397665cf9f4b15f29/result_video/video1.mp4)
+
+### Video 2
+
+![Video 2](https://github.com/RudraxDave/Text-to-Video-Diffusion-Magic/blob/88b8e1fad082bd902412256397665cf9f4b15f29/result_video/video2.mp4)
+
+### Video 3
+
+![Video 3](https://github.com/RudraxDave/Text-to-Video-Diffusion-Magic/blob/88b8e1fad082bd902412256397665cf9f4b15f29/result_video/video3.mp4)
+
+### Video 4
+
+![Video 4](https://github.com/RudraxDave/Text-to-Video-Diffusion-Magic/blob/88b8e1fad082bd902412256397665cf9f4b15f29/result_video/video4.mp4)
+
+
 
 
 ## Usage
